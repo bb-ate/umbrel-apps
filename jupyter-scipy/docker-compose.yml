@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: jupyter-scipy_server_1
+      APP_PORT: 8888
+    
+  server:
+    image: quay.io/jupyter/datascience-notebook:2025-01-08
+    command: start-notebook.py --ServerApp.token = "" --ServerApp.password = ""
+    restart: on-failure
+    hostname: "${DEVICE_HOSTNAME}"
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/jovyan/work
+    ports:
+      - 8888:8888/udp

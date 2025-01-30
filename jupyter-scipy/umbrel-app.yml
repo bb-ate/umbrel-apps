@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: jupyter-scipy
+name: Jupyter Scipy
+tagline: JupyterLab - A Next-Generation Notebook Interface
+icon: https://jupyter.org/assets/homepage/main-logo.svg
+category: Development
+version: "2025-01-08"
+port: 8888
+description: >-
+  JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
+
+developer: Jupyter
+website: https://jupyter.org/
+submitter: bb-ate
+submission: https://github.com/getumbrel/umbrel-hello-world-app
+repo: https://github.com/jupyter/docker-stacks
+support: https://github.com/jupyter/docker-stacks/issues
+gallery:
+  - https://jupyter.org/assets/homepage/labpreview.webp
+  - https://jupyter.org/assets/homepage/jupyterpreview.webp
+  - https://jupyter.org/assets/homepage/voilapreview.webp
+releaseNotes: >-
+  Release 2025-01-08 of the docker container
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

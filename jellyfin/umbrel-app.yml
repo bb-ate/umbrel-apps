@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: jellyfin
+id: bb-ate-jellyfin
 category: media
 name: Jellyfin
 version: "10.10.4"

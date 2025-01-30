@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: jupyter-scipy
+id: bb-ate-jupyter-scipy
 name: Jupyter Scipy
 tagline: JupyterLab - A Next-Generation Notebook Interface
 icon: https://jupyter.org/assets/homepage/main-logo.svg

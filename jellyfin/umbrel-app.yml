@@ -2,6 +2,7 @@ manifestVersion: 1
 id: bb-ate-jellyfin
 category: media
 name: Jellyfin
+icon: https://www.svgrepo.com/download/349420/jellyfin.svg
 version: "10.10.4"
 tagline: The Free Software Media System
 description: >-

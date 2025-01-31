@@ -11,7 +11,7 @@ volumes:
 services:
   app_proxy:
     environment:
-      APP_HOST: jellyfin_server_1
+      APP_HOST: bb-ate-jellyfin_server_1
       APP_PORT: 8096
       PROXY_AUTH_ADD: "false"
 

@@ -10,7 +10,7 @@ services:
     
   server:
     image: quay.io/jupyter/scipy-notebook:2025-01-28
-    command: start-notebook.py --ServerApp.token = "" --ServerApp.password = ""
+    command: start-notebook.py --ip='*' --NotebookApp.token='' --NotebookApp.password=''
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     volumes:

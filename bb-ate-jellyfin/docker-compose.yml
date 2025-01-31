@@ -3,7 +3,7 @@ version: "3.7"
 volumes:
   diskyvideo:
     driver_opts:
-      type: nfs
+      type: nfs4
       o: "addr=192.168.0.20,nolock,soft,r"
       device: ":/volume1/video"
 

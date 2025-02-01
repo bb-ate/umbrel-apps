@@ -8,11 +8,11 @@ volumes:
       device: ":/volume1/video"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: bb-ate-jellyfin_server_1
-      APP_PORT: 8096
-      PROXY_AUTH_ADD: "false"
+  # app_proxy:
+  #   environment:
+  #     APP_HOST: bb-ate-jellyfin_server_1
+  #     APP_PORT: 8096
+  #     PROXY_AUTH_ADD: "false"
 
   server:
     image: jellyfin/jellyfin:10.10.4

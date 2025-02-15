@@ -1,0 +1,29 @@
+version: "3.7"
+
+volumes:
+  nfs_files:
+    driver_opts:
+      type: nfs
+      o: "addr=192.168.0.20,nfsvers=4,rw"
+      device: ":/volume1/backups"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: bb-ate-file-browser_server_1
+      APP_PORT: 80
+
+  server:
+    image: filebrowser/filebrowser:v2.32.0@sha256:593478e3c24c5ea9f5d7478dc549965b7bc7030707291006ce8d0b6162d3454b
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/filebrowser.db:/database/filebrowser.db
+      - ${UMBREL_ROOT}/app-data:/data/app_data
+      - ${UMBREL_ROOT}/data/storage:/data/downloads
+      - nfs_files:data/backups
+    environment:
+      - FB_PORT=80
+      - FB_DATABASE=/database/filebrowser.db
+      - FB_ROOT=/data
+      - FB_NOAUTH=true

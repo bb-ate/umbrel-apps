@@ -1,0 +1,34 @@
+manifestVersion: 1
+id: bb-ate-file-browser
+category: files
+name: File Browser
+version: "2.32.0"
+tagline: Browse and manage the files on your Umbrel
+description: >-
+  File Browser lets you upload, delete, preview, rename and edit your folders and files.
+  
+  CUSTOM VERSION - maps an NFS share. Fork this into your own custom app store to adjust settings.
+releaseNotes: >-
+  This release includes various improvements and bug fixes:
+    - Fixed disk usage refreshing
+    - Improved handling of prompts during copy, move, and upload operations
+    - Added proper healthcheck for S6 containers
+    - Updated translations, including Spanish for "Hide dot files setting"
+
+
+  Full release notes are available at https://github.com/filebrowser/filebrowser/releases.
+developer: File Browser
+website: https://filebrowser.org/
+dependencies: []
+repo: https://github.com/filebrowser/filebrowser
+support: https://github.com/filebrowser/filebrowser/issues
+port: 7421
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: "/files/"
+deterministicPassword: false
+torOnly: false
+submitter: Umbrel
+submission: https://github.com/getumbrel/umbrel-apps/pull/169

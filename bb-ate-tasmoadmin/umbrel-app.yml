@@ -4,8 +4,8 @@ name: TasmoAdmin
 tagline: TasmoAdmin is an administrative Website for Devices flashed with Sonoff-Tasmota.
 icon: https://github.com/TasmoAdmin/TasmoAdmin/raw/refs/heads/master/assets/logo.svg
 category: Development
-version: "4.2.3"
-port: 8080
+version: "4.2.3b"
+port: 80
 description: >-
   TasmoAdmin (previously SonWEB) is an administrative platform for devices flashed with Tasmota
 

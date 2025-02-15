@@ -2,6 +2,7 @@ manifestVersion: 1
 id: bb-ate-file-browser
 category: files
 name: File Browser
+icon: https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Favatar-1590579241040.png%3Fgeneration%3D1590579241552005%26alt%3Dmedia&width=32&dpr=1&quality=100&sign=44a72d22&sv=2
 version: "2.32.0"
 tagline: Browse and manage the files on your Umbrel
 description: >-
@@ -24,11 +25,9 @@ repo: https://github.com/filebrowser/filebrowser
 support: https://github.com/filebrowser/filebrowser/issues
 port: 7421
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Fuploads%252Fgit-blob-9390768b0cbb83b1e7da55c0ae13ecd2d8fcb114%252F2.PNG%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=38dc1acc&sv=2
+  - https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Fuploads%252Fgit-blob-b6cab252432e211dec693fc77d036c15259a8087%252F1.PNG%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=95ee0495&sv=2
+  - https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Fuploads%252Fgit-blob-b9898a30b86b2026c4fdb9fe25104a0b74e6467f%252F5.PNG%3Falt%3Dmedia&width=768&dpr=1&quality=100&sign=3a936da2&sv=2
 path: "/files/"
 deterministicPassword: false
 torOnly: false
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/pull/169

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: bb-ate-file-browser
 category: files
 name: File Browser
-icon: https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Favatar-1590579241040.png%3Fgeneration%3D1590579241552005%26alt%3Dmedia&width=32&dpr=1&quality=100&sign=44a72d22&sv=2
+icon: https://filebrowser.org/~gitbook/image?url=https%3A%2F%2F1513098801-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-M8KDxOujDoPpJyJJ5_i%252Favatar-1590579241040.png%3Fgeneration%3D1590579241552005%26alt%3Dmedia&width=128&dpr=1&quality=100&sign=44a72d22&sv=2
 version: "2.32.0"
 tagline: Browse and manage the files on your Umbrel
 description: >-

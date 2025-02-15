@@ -13,6 +13,10 @@ developer: TasmoAdmin
 website: https://github.com/TasmoAdmin/TasmoAdmin
 repo: https://github.com/TasmoAdmin/TasmoAdmin
 support: https://github.com/TasmoAdmin/TasmoAdmin
+gallery:
+  - ../assets/tasmoadmin_1.png
+  - ../assets/tasmoadmin_2.png
+  - ../assets/tasmoadmin_3.png
 releaseNotes: >-
   See https://github.com/TasmoAdmin/TasmoAdmin/releases/tag/v4.2.3
 dependencies: []

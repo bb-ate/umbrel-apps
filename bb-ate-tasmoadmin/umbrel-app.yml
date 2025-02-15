@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: bb-ate-tasmoadmin
+name: TasmoAdmin
+tagline: TasmoAdmin is an administrative Website for Devices flashed with Sonoff-Tasmota.
+icon: https://github.com/TasmoAdmin/TasmoAdmin/raw/refs/heads/master/assets/logo.svg
+category: Development
+version: "4.2.3"
+port: 8080
+description: >-
+  TasmoAdmin (previously SonWEB) is an administrative platform for devices flashed with Tasmota
+
+developer: TasmoAdmin
+website: https://github.com/TasmoAdmin/TasmoAdmin
+repo: https://github.com/TasmoAdmin/TasmoAdmin
+support: https://github.com/TasmoAdmin/TasmoAdmin
+releaseNotes: >-
+  See https://github.com/TasmoAdmin/TasmoAdmin/releases/tag/v4.2.3
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: "" 

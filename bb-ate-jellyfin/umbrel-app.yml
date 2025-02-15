@@ -3,9 +3,11 @@ id: bb-ate-jellyfin
 category: media
 name: Jellyfin
 icon: https://www.svgrepo.com/download/349420/jellyfin.svg
-version: "10.10.4"
+version: "10.10.5"
 tagline: The Free Software Media System
 description: >-
+  CUSTOM UMBREL APP - Connects '/media' to NFS Share. Use this as an example only and fork this to your own custom app store to configure NFS settings.
+
   Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
 
 
@@ -33,12 +35,7 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  This minor release includes several improvements:
-    - Improved audio playback and streaming
-    - Enhanced video transcoding capabilities
-    - Fixed various issues with metadata handling
-    - Improved system stability and compatibility
-
+  This minor release brings several bugfixes to improve your Jellyfin experience.
 
   Full release notes can be found at https://github.com/jellyfin/jellyfin/releases
 torOnly: false

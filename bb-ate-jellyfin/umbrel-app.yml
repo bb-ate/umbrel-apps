@@ -3,7 +3,7 @@ id: bb-ate-jellyfin
 category: media
 name: Jellyfin
 icon: https://www.svgrepo.com/download/349420/jellyfin.svg
-version: "10.10.5"
+version: "10.10.6"
 tagline: The Free Software Media System
 description: >-
   CUSTOM UMBREL APP - Connects '/media' to NFS Share. Use this as an example only and fork this to your own custom app store to configure NFS settings.

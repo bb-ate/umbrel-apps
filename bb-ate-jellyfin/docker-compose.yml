@@ -15,7 +15,7 @@ services:
   #     PROXY_AUTH_ADD: "false"
 
   server:
-    image: jellyfin/jellyfin:10.10.6
+    image: jellyfin/jellyfin:10.10.7
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     network_mode: 'host'

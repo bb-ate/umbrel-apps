@@ -1,0 +1,51 @@
+version: "3.7"
+
+# ---------------------------------------------------------------------------
+# Wyoming Voice Services for Home Assistant
+#
+# faster-whisper  → STT  → port 10300
+# Piper           → TTS  → port 10200
+#
+# Both use the Wyoming protocol and integrate with HA via:
+#   Settings → Devices & Services → Add Integration → Wyoming Protocol
+#
+# Model/voice selection:
+#   WHISPER_MODEL  : tiny-int8 (default, fastest for CPU)
+#                    base-int8 or small-int8 for better accuracy
+#   PIPER_VOICE    : en_US-lessac-medium (default)
+#                    Browse voices: https://rhasspy.github.io/piper-samples/
+# ---------------------------------------------------------------------------
+
+services:
+
+  # ── Speech-to-Text ────────────────────────────────────────────────────────
+  faster-whisper:
+    image: lscr.io/linuxserver/faster-whisper:latest
+    container_name: faster-whisper
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/London}
+      - WHISPER_MODEL=tiny-int8
+      - WHISPER_BEAM=1
+      - WHISPER_LANG=en
+    volumes:
+      - ${APP_DATA_DIR}/faster-whisper:/config
+    ports:
+      - "10300:10300"
+
+  # ── Text-to-Speech ────────────────────────────────────────────────────────
+  piper:
+    image: lscr.io/linuxserver/piper:latest
+    container_name: piper
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-Europe/London}
+      - PIPER_VOICE=en_GB-alan-medium
+    volumes:
+      - ${APP_DATA_DIR}/piper:/config
+    ports:
+      - "10200:10200"

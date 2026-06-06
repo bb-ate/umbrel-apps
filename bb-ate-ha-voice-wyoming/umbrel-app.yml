@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: ha-voice-wyoming
+category: home-automation
+name: Wyoming Voice Services
+version: "1.0.0"
+tagline: Local speech-to-text and text-to-speech for Home Assistant
+description: >-
+  Provides two Wyoming protocol services for a fully local Home Assistant
+  voice pipeline:
+
+
+  • faster-whisper (port 10300) — Speech-to-text using OpenAI's Whisper model
+  via the fast CTranslate2 inference engine. Defaults to the tiny-int8 model,
+  suitable for CPU-only hosts like the Intel N150.
+
+
+  • Piper (port 10200) — Neural text-to-speech that streams audio back to Home
+  Assistant. Defaults to the en_US-lessac-medium voice.
+
+
+  🛠️ SETUP INSTRUCTIONS
+
+
+  After installing, go to Home Assistant → Settings → Devices & Services →
+  Add Integration → Wyoming Protocol. Add two entries:
+
+  1. Host: your Umbrel IP, Port: 10300 (faster-whisper / STT)
+
+  2. Host: your Umbrel IP, Port: 10200 (Piper / TTS)
+
+
+  Then go to Settings → Voice Assistants, create a new pipeline, select
+  faster-whisper for Speech-to-text and Piper for Text-to-speech.
+
+
+  To change the Whisper model, edit WHISPER_MODEL in docker-compose.yml.
+  Available models: tiny-int8 (fastest), base-int8, small-int8.
+
+
+  To change the Piper voice, edit PIPER_VOICE. Browse voices at
+  https://rhasspy.github.io/piper-samples/
+
+developer: rhasspy / LinuxServer.io
+website: https://github.com/rhasspy/wyoming-faster-whisper
+repo: https://github.com/rhasspy/wyoming-faster-whisper
+support: https://community.home-assistant.io/c/voice/21
+port: 10300
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: local

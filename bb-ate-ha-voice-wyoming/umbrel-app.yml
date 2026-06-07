@@ -2,6 +2,7 @@ manifestVersion: 1
 id: ha-voice-wyoming
 category: home-automation
 name: Wyoming Voice Services
+icon: https://freesvg.org/download/40358
 version: "1.0.0"
 tagline: Local speech-to-text and text-to-speech for Home Assistant
 description: >-
@@ -41,6 +42,7 @@ description: >-
   https://rhasspy.github.io/piper-samples/
 
 developer: rhasspy / LinuxServer.io
+dependencies: []
 website: https://github.com/rhasspy/wyoming-faster-whisper
 repo: https://github.com/rhasspy/wyoming-faster-whisper
 support: https://community.home-assistant.io/c/voice/21
@@ -50,3 +52,4 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 submitter: local
+releasenotes: n/a

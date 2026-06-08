@@ -47,7 +47,10 @@ website: https://github.com/rhasspy/wyoming-faster-whisper
 repo: https://github.com/rhasspy/wyoming-faster-whisper
 support: https://community.home-assistant.io/c/voice/21
 port: 10300
-gallery: []
+gallery: 
+  - ../assets/tasmoadmin_1.png
+  - ../assets/tasmoadmin_2.png
+  - ../assets/tasmoadmin_3.png
 path: ""
 defaultUsername: ""
 defaultPassword: ""

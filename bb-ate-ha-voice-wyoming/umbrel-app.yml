@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: ha-voice-wyoming
+id: bb-ate-ha-voice-wyoming
 category: home-automation
 name: Wyoming Voice Services
 icon: https://freesvg.org/download/40358
@@ -19,7 +19,7 @@ description: >-
   Assistant. Defaults to the en_US-lessac-medium voice.
 
 
-  🛠️ SETUP INSTRUCTIONS
+  SETUP INSTRUCTIONS
 
 
   After installing, go to Home Assistant → Settings → Devices & Services →

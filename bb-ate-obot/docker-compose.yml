@@ -1,0 +1,59 @@
+version: "3.7"
+
+services:
+
+  # ── Umbrel reverse proxy ─────────────────────────────────────────────────────
+  app_proxy:
+    environment:
+      APP_HOST: obot-mcp-gateway_server_1
+      APP_PORT: 8080
+
+  # ── Obot MCP Gateway ─────────────────────────────────────────────────────────
+  server:
+    image: ghcr.io/obot-platform/obot:latest
+    restart: on-failure
+    stop_grace_period: 2m
+
+    # Obot needs the Docker socket to spawn MCP server containers on-demand.
+    # It uses the same Docker engine that Umbrel itself runs on.
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    environment:
+      # ── Networking ────────────────────────────────────────────────────────────
+      # Tell Obot its public-facing hostname so that MCP server connection
+      # URLs and auth redirects are generated correctly.
+      # Umbrel exposes this app via the app_proxy on port 8080.
+      OBOT_SERVER_HOSTNAME: "${DEVICE_DOMAIN_NAME}:8080"
+
+      # ── Authentication ────────────────────────────────────────────────────────
+      # Enable Obot's own authentication layer.  Without this, anyone who can
+      # reach port 8080 on the Umbrel could launch MCP servers.
+      OBOT_SERVER_ENABLE_AUTHENTICATION: "true"
+
+      # Bootstrap token for the initial admin login — generated automatically
+      # by exports.sh on first install and shown in the Umbrel app-store UI
+      # as the default password.  Must be at least 8 characters.
+      OBOT_BOOTSTRAP_TOKEN: "${APP_OBOT_MCP_GATEWAY_BOOTSTRAP_TOKEN}"
+
+      # ── Model providers (optional — configure via UI instead) ─────────────────
+      # Uncomment and populate whichever provider(s) you want pre-configured.
+      # OPENAI_API_KEY: "${OPENAI_API_KEY:-}"
+      # ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+
+      # ── Storage ───────────────────────────────────────────────────────────────
+      # Built-in PostgreSQL is stored under /data; no external DB needed.
+      # For S3-compatible published-workflow storage, set these:
+      # OBOT_SERVER_PUBLISHED_WORKFLOWS_BUCKET: ""
+      # OBOT_SERVER_PUBLISHED_WORKFLOWS_S3_ENDPOINT: ""
+      # AWS_ACCESS_KEY_ID: ""
+      # AWS_SECRET_ACCESS_KEY: ""
+
+    # Expose to the Umbrel proxy network only — not directly to the host.
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge

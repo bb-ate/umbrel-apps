@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: bb-ate-obot
+category: developer
+name: Obot MCP Gateway
+version: "0.22.0"
+tagline: Self-hosted MCP gateway for managing and securing AI tool integrations
+description: >-
+  Obot is an open-source MCP (Model Context Protocol) Gateway that gives you a
+  centralised control plane for discovering, onboarding, managing, securing,
+  and scaling MCP servers. Connect Claude, ChatGPT, Cursor, or any MCP client
+  to a curated catalogue of tools — GitHub, Slack, Notion, Outlook, and more
+  — with fine-grained access control, audit logging, and OAuth handling all
+  managed in one place.
+
+  Features include composite MCP servers (combine multiple servers into one
+  endpoint), per-user or per-group access policies, built-in audit trails,
+  and a chat client for interacting directly with MCP-enabled agents.
+
+  Obot spawns MCP server containers on demand using the host Docker socket,
+  so no extra infrastructure is needed. Data is stored in the built-in
+  PostgreSQL instance and persisted to the Umbrel data volume.
+
+  A unique bootstrap token is generated automatically on first install and
+  shown below as the default password. Use it to log in as admin and complete
+  initial setup (configure your model provider, auth settings, etc.).
+developer: Obot AI
+website: https://obot.ai
+dependencies: []
+repo: https://github.com/obot-platform/obot
+support: https://discord.gg/9sSf4UyAMC
+port: 8080
+gallery:
+  - https://obot.ai/images/screenshots/mcp-gateway-1.png
+  - https://obot.ai/images/screenshots/mcp-gateway-2.png
+path: ""
+defaultUsername: ""
+defaultPassword: $APP_OBOT_MCP_GATEWAY_BOOTSTRAP_TOKEN
+releaseNotes: >-
+  v0.22.0 introduces curated skill catalogues for coding agents, fleet-wide
+  visibility via obot scan, UI-managed container registry pull secrets, and
+  ECR IAM role support. See https://github.com/obot-platform/obot/releases
+  for full details.
+submitter: Ben
+submission: https://github.com/obot-platform/obot

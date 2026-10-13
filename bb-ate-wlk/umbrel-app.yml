@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: bb-ate-wlk
+category: developer
+name: WhisperLiveKit
+version: "0.2.26"
+tagline: Self-hosted real-time speech-to-text with diarisation
+description: >-
+  WhisperLiveKit on CPU with Diart speaker diarisation. Exposes a
+  Deepgram-compatible WebSocket at /v1/listen for use as a custom
+  STT provider in the Omi app, plus a browser test UI.
+  After starting save Huggingface token with the command:
+  echo -n 'hf_your_token' > ~/umbrel/app-data/bb-ate-wlk/data/cache/huggingface/token
+developer: Quentin Fuxa
+website: https://github.com/QuentinFuxa/WhisperLiveKit
+dependencies: []
+repo: https://github.com/QuentinFuxa/WhisperLiveKit
+support: https://github.com/QuentinFuxa/WhisperLiveKit/issues
+port: 8765
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: ""
+submitter: Ben Brooking
+submission: ""

@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: bb-ate-wlk_web_1
+      APP_PORT: 8000
+      # Let the Omi app reach the Deepgram endpoint without Umbrel's login
+      PROXY_AUTH_WHITELIST: "/v1/listen*"
+
+  web:
+    image: bbate/wlk-cpu-diart:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    mem_limit: 6g
+    volumes:
+      - ${APP_DATA_DIR}/data/cache:/cache
+    environment:
+      HF_HOME: /cache/huggingface
+      TORCH_HOME: /cache/torch
+      XDG_CACHE_HOME: /cache
+    command:
+      - --host
+      - 0.0.0.0
+      - --model
+      - small
+      - --language
+      - en
+      - --pcm-input
+      - --diarization
+      - --diarization-backend
+      - diart

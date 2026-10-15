@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_WHITELIST: "/v1/listen*"
 
   web:
-    image: bbate/wlk-cpu-diart:0.2.26-pa2
+    image: bbate/wlk-cpu-diart:0.2.26-pa3
     restart: on-failure
     stop_grace_period: 1m
     mem_limit: 6g

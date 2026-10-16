@@ -2,7 +2,7 @@ manifestVersion: 1
 id: bb-ate-wlk
 category: developer
 name: WhisperLiveKit
-version: "0.2.26-pa3"
+version: "0.2.26-pa4"
 tagline: Self-hosted real-time speech-to-text with diarisation
 description: >-
   WhisperLiveKit on CPU with Diart speaker diarisation. Exposes a
